@@ -1,2 +1,2 @@
-# -retts-gi_feladat
+Érettségi_feladat
 Remélem sikerül
