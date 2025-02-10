@@ -1,0 +1,47 @@
+public class Tehen {
+    
+    String id;
+    int [] mennyisegek = new int[7];
+    
+    public Tehen(String id) {
+        this.id = id;
+    }
+
+    public void eredmenytRogzit(String nap, String menyiseg) {
+        this.mennyisegek[Integer.parseInt(nap)] = Integer.parseInt(menyiseg);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 61 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Tehen other = (Tehen) obj;
+        return Objects.equals(this.id, other.id);
+    }
+
+    
+
+    @Override
+    public String toString() {
+        String result = "Tehen=" + id +" mennyisegek=";
+        for (int liter : mennyisegek) {
+            result += " "+liter;
+        }
+        return result;
+    }
+    
+}
